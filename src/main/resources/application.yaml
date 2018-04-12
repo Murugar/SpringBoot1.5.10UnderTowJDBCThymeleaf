@@ -1,0 +1,19 @@
+spring:
+#Datasource configuration
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/thymeleaf?useSSL=false
+    username: root
+    password: good1234
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+#Liquibase configuration
+liquibase:
+  change-log: classpath:/liquibase/db.changelog-master.xml
+  drop-first: false
+  enabled: true
+  url: jdbc:mysql://localhost:3306/thymeleaf?useSSL=false
+  user: root
+  password: good1234
+  contexts: mysql
